@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    --body-primary--fond: #F9EFDB;
+    --color-title-primary: #180161;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* CONTENEDOR */
+.hero {
+    display: grid;
+    /* hacemos columanas iguales */
+    grid-template-columns:  1fr 1fr;
+    grid-auto-rows: 400px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    /* hace que se ajuste al tamño del espacio que esta ocupando */
+    object-fit: contain;
+
+}
+.informacion {
+    align-self: center;
+}
+
+.info__title {
+    font-size: 3rem;
+    color: #180161;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.info__parrafo {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+}
+
+.button_info {
+    color: white;
+    background-color: #FFB200;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 25px;
+    font-weight: bolder;
+    
+}
+
+/* parte 2 */
+.dishe-subtitle {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 80px;
+    max-width: 100%;
+    background-color: #FFB200;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+.dishe-grid {
+    margin: 100px 0px;
+    display: grid;
+    /* 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(60px, 200px));
+    grid-auto-rows: 1fr;
+    /* separar nuestros elementos */
+    gap: 20px;
+    justify-content: center;
+}
+.dishe-item {
+    width: 100%;
+    height: 100%;
+    /* cubre todas las celdas que estan  */
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+.dishe-item:hover { 
+    opacity: 0.5;
+}
+
+/* la imagen mas grande */
+.dishes_item_big {
+    grid-area: 1 / 1 / 3 / 3 ;
+
+}
+
+/* 3 parte menu */
+
+.menu_subtitle {
+    color: #ffffff;
+    background-color: #FFB200;
+    font-size: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    
+}
+
+.Menu {
+    margin-bottom: 200px;
+    
+
+}
+
+.Menu-grid {
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax( 150px, 130px));
+
+}
+
+.menu-grid-item  {
+    background-color: #FFB200;
+    padding: 20px
+    
+}
+/* tamaño de imagenes */
+.menu-grid-item  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.menu-grid-item:hover {
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+/* le damos un minno a ese rtexto */
+
+@media  screen and (max-width: 768px) {
+    .hero {
+        grid-template-columns: minmax(300px , 500px);
+        justify-content: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    .dishe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+    }
+    
+}

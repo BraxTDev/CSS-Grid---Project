@@ -1,0 +1,1 @@
+se realizara un proyecto  mejor dicho un mini prroyecto con css grid, para mejorar un poco en esta area de CSS y la mas importante
